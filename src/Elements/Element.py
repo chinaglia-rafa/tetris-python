@@ -1,7 +1,17 @@
+import sys
+del sys.path[0]
+sys.path.insert(0, '..')
+
+import arcade
+import random
+import PIL
+
+from Elements.Element import *
+from Utils.Consts import *
+from Utils.Position import *
 from Utils.Position import Position
 
 class Element:
-
     def __init__(self, imageName):
         self._pos = Position(1, 1)
         self._isTransposable = True
@@ -18,7 +28,7 @@ class Element:
 
     def setPosition(self, x, y):
         return self._pos.setPosition
-        
+
     @property
     def isTransposable(self):
         return self._isTransposable
